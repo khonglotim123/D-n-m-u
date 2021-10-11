@@ -96,11 +96,8 @@ namespace _3_GUI_PresetationLayer
             nhanVien.TrangThai = 1;
             MessageBox.Show(_qlNhanVien.Delete(nhanVien), "Thông báo");
             LoadData();
-            //LoadData();
+            //LoadData(); alo
         }
-
-
-
         private void Cbx_HD_CheckedChanged(object sender, EventArgs e)
         {
             if (Cbx_HD.Checked)
