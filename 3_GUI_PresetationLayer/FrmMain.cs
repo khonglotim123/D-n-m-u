@@ -34,6 +34,7 @@ namespace _3_GUI_PresetationLayer
             FrmDangNhap frmdangnhap = new FrmDangNhap();
             if (CheckExistForm("FrmDangNhap") == false)
             {
+                this.Hide();
                 frmdangnhap.Show();
             }
             else if (CheckExistForm("FrmDangNhap") == true)
@@ -94,9 +95,20 @@ namespace _3_GUI_PresetationLayer
             else if (_lstbangtam.Count != 0 && _bangtam.VaiTro == 1)
             {
                 MessageBox.Show("Chỉ quản lý mới có thể truy cập","Thông báo");
+            }           
+            
+        }             
+        
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (_bangtam != null)
+                {
+                    _BT.DeleteBangTam(_bangtam);
+                }
+                Application.Exit();
             }
-            
-            
         }
     }
 }

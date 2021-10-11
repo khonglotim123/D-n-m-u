@@ -43,9 +43,9 @@ namespace _3_GUI_PresetationLayer
                 _nhanVien.MatKhau = Txt_MatKhauMoi.Text;
                 _nhanVien.So = 1;
                 MessageBox.Show(_ql.ChagePassWord(_nhanVien));
-                FrmQLNhanVien frmQLNhanVien = new FrmQLNhanVien();
+                FrmMain frmMain = new FrmMain();
                 this.Hide();
-                frmQLNhanVien.Show();
+                frmMain.Show();
             }
             else
             {

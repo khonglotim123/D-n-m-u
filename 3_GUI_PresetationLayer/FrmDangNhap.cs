@@ -74,8 +74,8 @@ namespace _3_GUI_PresetationLayer
                 else if (_nhanVien.So == 1)
                 {
                     this.Hide();
-                    FrmQLNhanVien frmQLNhanvien = new FrmQLNhanVien();
-                    frmQLNhanvien.Show();
+                    FrmMain frmMain = new FrmMain();
+                    frmMain.Show();
                 }
             }
             else if (_nhanVien.TrangThai==1)
@@ -96,7 +96,9 @@ namespace _3_GUI_PresetationLayer
         {
             if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
+                FrmMain frmMain = new FrmMain();
+                frmMain.Show();
             }
         }
     }
