@@ -7,27 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _2_BUS_BusinessLayer.IServices;
+using _2_BUS_BusinessLayer.Services;
+using _1_DAL_DataAccessLayer.Models;
 
 
 namespace _3_GUI_PresetationLayer
 {
     public partial class FrmMain : Form
     {
+        IBangTamService _BT;
+        List<BangTam> _lstbangtam;
+        BangTam _bangtam;
         public FrmMain()
         {
             InitializeComponent();
+            _BT = new BangTamService();
+            _bangtam = new BangTam();
+            _lstbangtam = new List<BangTam>();
+            _lstbangtam = _BT.getBangTam();
+            _bangtam = _lstbangtam.FirstOrDefault();
         }
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!CheckExistForm("FrmDangNhap"))
+            FrmDangNhap frmdangnhap = new FrmDangNhap();
+            if (CheckExistForm("FrmDangNhap") == false)
             {
-                FrmDangNhap frmdangnhap = new FrmDangNhap();                
                 frmdangnhap.Show();
             }
-            else
+            else if (CheckExistForm("FrmDangNhap") == true)
             {
-                Active("FrmDangNhap");
+                frmdangnhap.Activate();
             }
         }
         private bool CheckExistForm(string name)
@@ -35,7 +46,7 @@ namespace _3_GUI_PresetationLayer
             bool check = false;
             foreach (Form frm in this.MdiChildren)
             {
-                if (frm.Name==name)
+                if (frm.Name == name)
                 {
                     check = true;
                     break;
@@ -48,12 +59,44 @@ namespace _3_GUI_PresetationLayer
         {
             foreach (Form frm in this.MdiChildren)
             {
-                if (frm.Name==name)
+                if (frm.Name == name)
                 {
                     frm.Activate();
                     break;
                 }
             }
+        }
+
+        private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_lstbangtam.Count != 0)
+            {
+                FrmQuanLySanPham frmQuanLySanPham = new FrmQuanLySanPham();
+                frmQuanLySanPham.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bạn cần phải đăng nhập trước","Thông báo");
+            }
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_lstbangtam.Count != 0 && _bangtam.VaiTro==0)
+            {
+                FrmQLNhanVien frmQLNhanVien = new FrmQLNhanVien();
+                frmQLNhanVien.Show();
+            }
+            else if (_lstbangtam.Count == 0)
+            {
+                MessageBox.Show("Bạn cần phải đăng nhập trước", "Thông báo");
+            }
+            else if (_lstbangtam.Count != 0 && _bangtam.VaiTro == 1)
+            {
+                MessageBox.Show("Chỉ quản lý mới có thể truy cập","Thông báo");
+            }
+            
+            
         }
     }
 }
