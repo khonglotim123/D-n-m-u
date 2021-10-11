@@ -33,6 +33,7 @@ namespace _1_DAL_DataAccessLayer.DALServices
         {
             _db.BangTams.Add(bangTam);
             _db.SaveChanges();
+            //xem đã update được chưa vậy bạn
         }
     }
 }
