@@ -1,0 +1,15 @@
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\bin\Debug\net5.0\1_DAL_DataAccessLayer.deps.json
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\bin\Debug\net5.0\1_DAL_DataAccessLayer.runtimeconfig.json
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\bin\Debug\net5.0\1_DAL_DataAccessLayer.runtimeconfig.dev.json
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\bin\Debug\net5.0\1_DAL_DataAccessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\bin\Debug\net5.0\ref\1_DAL_DataAccessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\bin\Debug\net5.0\1_DAL_DataAccessLayer.pdb
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\1_DAL_DataAccessLayer.csproj.AssemblyReference.cache
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\1_DAL_DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\1_DAL_DataAccessLayer.AssemblyInfoInputs.cache
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\1_DAL_DataAccessLayer.AssemblyInfo.cs
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\1_DAL_DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\1_DAL_DataAccessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\ref\1_DAL_DataAccessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\1_DAL_DataAccessLayer.pdb
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\1_DAL_DataAccessLayer\obj\Debug\net5.0\1_DAL_DataAccessLayer.genruntimeconfig.cache

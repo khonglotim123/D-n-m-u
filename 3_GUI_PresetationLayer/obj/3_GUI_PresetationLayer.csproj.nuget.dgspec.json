@@ -1,0 +1,197 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\3_GUI_PresetationLayer\\3_GUI_PresetationLayer.csproj": {}
+  },
+  "projects": {
+    "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\1_DAL_DataAccessLayer\\1_DAL_DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\1_DAL_DataAccessLayer\\1_DAL_DataAccessLayer.csproj",
+        "projectName": "1_DAL_DataAccessLayer",
+        "projectPath": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\1_DAL_DataAccessLayer\\1_DAL_DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\XAPE\\.nuget\\packages\\",
+        "outputPath": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\1_DAL_DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\XAPE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\2_BUS_BusinessLayer\\2_BUS_BusinessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\2_BUS_BusinessLayer\\2_BUS_BusinessLayer.csproj",
+        "projectName": "2_BUS_BusinessLayer",
+        "projectPath": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\2_BUS_BusinessLayer\\2_BUS_BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\XAPE\\.nuget\\packages\\",
+        "outputPath": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\2_BUS_BusinessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\XAPE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\1_DAL_DataAccessLayer\\1_DAL_DataAccessLayer.csproj": {
+                "projectPath": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\1_DAL_DataAccessLayer\\1_DAL_DataAccessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\3_GUI_PresetationLayer\\3_GUI_PresetationLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\3_GUI_PresetationLayer\\3_GUI_PresetationLayer.csproj",
+        "projectName": "3_GUI_PresetationLayer",
+        "projectPath": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\3_GUI_PresetationLayer\\3_GUI_PresetationLayer.csproj",
+        "packagesPath": "C:\\Users\\XAPE\\.nuget\\packages\\",
+        "outputPath": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\3_GUI_PresetationLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\XAPE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\2_BUS_BusinessLayer\\2_BUS_BusinessLayer.csproj": {
+                "projectPath": "E:\\dữ liệu mới ổ c\\Dự án mẫu\\BaiThu4_DAM_XagaPH13499\\2_BUS_BusinessLayer\\2_BUS_BusinessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

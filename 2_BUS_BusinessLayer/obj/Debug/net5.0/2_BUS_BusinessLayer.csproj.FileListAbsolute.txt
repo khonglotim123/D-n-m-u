@@ -1,0 +1,15 @@
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\bin\Debug\net5.0\2_BUS_BusinessLayer.deps.json
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\bin\Debug\net5.0\2_BUS_BusinessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\bin\Debug\net5.0\ref\2_BUS_BusinessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\bin\Debug\net5.0\2_BUS_BusinessLayer.pdb
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\2_BUS_BusinessLayer.csproj.AssemblyReference.cache
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\2_BUS_BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\2_BUS_BusinessLayer.AssemblyInfoInputs.cache
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\2_BUS_BusinessLayer.AssemblyInfo.cs
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\2_BUS_BusinessLayer.csproj.CoreCompileInputs.cache
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\2_BUS_BusinessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\ref\2_BUS_BusinessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\2_BUS_BusinessLayer.pdb
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\bin\Debug\net5.0\1_DAL_DataAccessLayer.dll
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\bin\Debug\net5.0\1_DAL_DataAccessLayer.pdb
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\2_BUS_BusinessLayer\obj\Debug\net5.0\2_BUS_BusinessLayer.csproj.CopyComplete
