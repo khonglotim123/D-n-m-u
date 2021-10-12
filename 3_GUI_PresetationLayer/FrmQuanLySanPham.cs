@@ -104,5 +104,24 @@ namespace _3_GUI_PresetationLayer
                 Pict_Anh.Image = Image.FromFile(link);
             }
         }
+        void LoadData(string timkiem)
+        {
+            Dgrid_DSSanPham.ColumnCount = 5;
+            Dgrid_DSSanPham.Columns[0].Name = "Tên sản phẩm";
+            Dgrid_DSSanPham.Columns[1].Name = "Số lượng";
+            Dgrid_DSSanPham.Columns[2].Name = "Đơn giá nhập";
+            Dgrid_DSSanPham.Columns[3].Name = "Đơn giá bán";
+            Dgrid_DSSanPham.Columns[4].Name = "Ghi chú";
+            Dgrid_DSSanPham.Rows.Clear();
+            foreach (var x in _QLSP.getlstSanPham().Where(c => c.TrangThai == 0 && c.TenHang.ToLower().StartsWith(timkiem)))
+            {
+                Dgrid_DSSanPham.Rows.Add(x.TenHang, x.SoLuong, x.DonGiaNhap, x.DonGiaBan, x.GhiChu);
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            LoadData(Txt_TimKiemSP.Text);
+        }
     }
 }

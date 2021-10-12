@@ -203,6 +203,7 @@ namespace _3_GUI_PresetationLayer
             this.Txt_TimKiemNv.Name = "Txt_TimKiemNv";
             this.Txt_TimKiemNv.Size = new System.Drawing.Size(190, 23);
             this.Txt_TimKiemNv.TabIndex = 48;
+            this.Txt_TimKiemNv.TextChanged += new System.EventHandler(this.Txt_TimKiemNv_TextChanged);
             // 
             // Btn_XoaNv
             // 

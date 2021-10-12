@@ -44,7 +44,22 @@ namespace _3_GUI_PresetationLayer
                 Dgrid_NhanVien.Rows.Add(x.MaNv, x.Email, x.TeNv, x.DiaChi, x.TinhTrang == 1 ? "Hoạt động" : "Không hoạt động", x.MatKhau, x.VaiTro == 1 ? "Nhân viên" : "Quản lý");
             }
         }
-
+        void LoadData(string timkiem)
+        {
+            Dgrid_NhanVien.ColumnCount = 7;
+            Dgrid_NhanVien.Columns[0].Name = "Mã nhân viên";
+            Dgrid_NhanVien.Columns[1].Name = "Email";
+            Dgrid_NhanVien.Columns[2].Name = "Tên nhân viên";
+            Dgrid_NhanVien.Columns[3].Name = "Địa chỉ";
+            Dgrid_NhanVien.Columns[4].Name = "Tình trạng";
+            Dgrid_NhanVien.Columns[5].Name = "Mật khẩu";
+            Dgrid_NhanVien.Columns[6].Name = "Vai trò";
+            Dgrid_NhanVien.Rows.Clear();
+            foreach (var x in _qlNhanVien.getlstNhanVien().Where(c => c.TrangThai == 0 && c.TeNv.ToLower().StartsWith(timkiem)))
+            {
+                Dgrid_NhanVien.Rows.Add(x.MaNv, x.Email, x.TeNv, x.DiaChi, x.TinhTrang == 1 ? "Hoạt động" : "Không hoạt động", x.MatKhau, x.VaiTro == 1 ? "Nhân viên" : "Quản lý");
+            }
+        }
         private void Btn_ThemNv_Click(object sender, EventArgs e)
         {
             NhanVien nhanVien = new NhanVien();
@@ -112,6 +127,11 @@ namespace _3_GUI_PresetationLayer
             {
                 Cbx_HD.Checked = false;
             }
+        }
+
+        private void Txt_TimKiemNv_TextChanged(object sender, EventArgs e)
+        {
+            LoadData(Txt_TimKiemNv.Text);
         }
     }
 }

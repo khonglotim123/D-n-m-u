@@ -33,7 +33,7 @@ namespace _3_GUI_PresetationLayer
             this.Dgrid_DSSanPham = new System.Windows.Forms.DataGridView();
             this.Txt_TenSP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Txt_TimKiemSP = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -99,12 +99,13 @@ namespace _3_GUI_PresetationLayer
             this.label1.TabIndex = 15;
             this.label1.Text = "Tên hàng:";
             // 
-            // textBox2
+            // Txt_TimKiemSP
             // 
-            this.textBox2.Location = new System.Drawing.Point(169, 455);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 23);
-            this.textBox2.TabIndex = 18;
+            this.Txt_TimKiemSP.Location = new System.Drawing.Point(169, 455);
+            this.Txt_TimKiemSP.Name = "Txt_TimKiemSP";
+            this.Txt_TimKiemSP.Size = new System.Drawing.Size(159, 23);
+            this.Txt_TimKiemSP.TabIndex = 18;
+            this.Txt_TimKiemSP.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label5
             // 
@@ -289,7 +290,7 @@ namespace _3_GUI_PresetationLayer
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Txt_TenSP);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Txt_TimKiemSP);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -315,7 +316,7 @@ namespace _3_GUI_PresetationLayer
         private System.Windows.Forms.DataGridView Dgrid_DSSanPham;
         private System.Windows.Forms.TextBox Txt_TenSP;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txt_TimKiemSP;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
