@@ -116,21 +116,21 @@ namespace _3_GUI_PresetationLayer
             // sảnPhẩmToolStripMenuItem
             // 
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sảnPhẩmToolStripMenuItem.Text = "Sản Phẩm";
             this.sảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.sảnPhẩmToolStripMenuItem_Click);
             // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nhânViênToolStripMenuItem.Text = "Nhân Viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // kháchHàngToolStripMenuItem
             // 
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
-            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kháchHàngToolStripMenuItem.Text = "khách Hàng";
             // 
             // thốngKêToolStripMenuItem

@@ -51,10 +51,13 @@ namespace _3_GUI_PresetationLayer
             this.Btn_XoaSP = new System.Windows.Forms.Button();
             this.Txt_DonGiaNhap = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.Pict_Anh = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_DSSanPham)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nbx_SoLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pict_Anh)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -220,6 +223,7 @@ namespace _3_GUI_PresetationLayer
             this.Btn_SuaSP.TabIndex = 28;
             this.Btn_SuaSP.Text = "Sửa";
             this.Btn_SuaSP.UseVisualStyleBackColor = true;
+            this.Btn_SuaSP.Click += new System.EventHandler(this.Btn_SuaSP_Click);
             // 
             // Btn_XoaSP
             // 
@@ -229,6 +233,7 @@ namespace _3_GUI_PresetationLayer
             this.Btn_XoaSP.TabIndex = 29;
             this.Btn_XoaSP.Text = "Xóa";
             this.Btn_XoaSP.UseVisualStyleBackColor = true;
+            this.Btn_XoaSP.Click += new System.EventHandler(this.Btn_XoaSP_Click);
             // 
             // Txt_DonGiaNhap
             // 
@@ -247,11 +252,32 @@ namespace _3_GUI_PresetationLayer
             this.label6.TabIndex = 31;
             this.label6.Text = "Tìm kiếm tại đây:";
             // 
+            // Pict_Anh
+            // 
+            this.Pict_Anh.Location = new System.Drawing.Point(771, 77);
+            this.Pict_Anh.Name = "Pict_Anh";
+            this.Pict_Anh.Size = new System.Drawing.Size(159, 60);
+            this.Pict_Anh.TabIndex = 32;
+            this.Pict_Anh.TabStop = false;
+            this.Pict_Anh.Click += new System.EventHandler(this.Pict_Anh_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(716, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 19);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Ảnh:";
+            // 
             // FrmQuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 497);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Pict_Anh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Txt_DonGiaNhap);
             this.Controls.Add(this.Btn_XoaSP);
@@ -277,6 +303,7 @@ namespace _3_GUI_PresetationLayer
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Nbx_SoLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pict_Anh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +333,7 @@ namespace _3_GUI_PresetationLayer
         private System.Windows.Forms.Button Btn_XoaSP;
         private System.Windows.Forms.TextBox Txt_DonGiaNhap;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox Pict_Anh;
+        private System.Windows.Forms.Label label7;
     }
 }

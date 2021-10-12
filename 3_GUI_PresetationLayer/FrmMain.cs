@@ -72,7 +72,7 @@ namespace _3_GUI_PresetationLayer
         {
             if (_lstbangtam.Count != 0)
             {
-                FrmQuanLySanPham frmQuanLySanPham = new FrmQuanLySanPham();
+                FrmQuanLySanPham frmQuanLySanPham = new FrmQuanLySanPham();                
                 frmQuanLySanPham.Show();
             }
             else
