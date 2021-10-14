@@ -31,16 +31,31 @@ namespace _3_GUI_PresetationLayer
         }
         void LoadData()
         {
-            Dgrid_DSSanPham.ColumnCount = 5;
+            DataGridViewButtonColumn Xacnhan = new DataGridViewButtonColumn();
+            Xacnhan.Name = "Xóa";
+            Xacnhan.HeaderText = "Xác nhận";
+            Xacnhan.UseColumnTextForButtonValue = true;
+            Xacnhan.Text = "Xác nhận";
+
+            DataGridViewComboBoxColumn cmb = new DataGridViewComboBoxColumn();            
+            cmb.HeaderText = "Chức năng";
+            cmb.Items.Add("Xóa");
+            cmb.Items.Add("Sửa");
+            cmb.Name = "Chức năng";
+
+            Dgrid_DSSanPham.ColumnCount = 7;
             Dgrid_DSSanPham.Columns[0].Name = "Tên sản phẩm";
             Dgrid_DSSanPham.Columns[1].Name = "Số lượng";
             Dgrid_DSSanPham.Columns[2].Name = "Đơn giá nhập";
             Dgrid_DSSanPham.Columns[3].Name = "Đơn giá bán";
             Dgrid_DSSanPham.Columns[4].Name = "Ghi chú";
+            Dgrid_DSSanPham.Columns[5].Name = "Ảnh";
+            Dgrid_DSSanPham.Columns.Add(cmb);
+            Dgrid_DSSanPham.Columns.Add(Xacnhan);
             Dgrid_DSSanPham.Rows.Clear();
             foreach (var x in _QLSP.getlstSanPham().Where(c => c.TrangThai == 0))
             {
-                Dgrid_DSSanPham.Rows.Add(x.TenHang, x.SoLuong, x.DonGiaNhap, x.DonGiaBan, x.GhiChu);
+                Dgrid_DSSanPham.Rows.Add(x.TenHang, x.SoLuong, x.DonGiaNhap, x.DonGiaBan, x.GhiChu,x.HinhAnh);
             }
         }
 
@@ -67,10 +82,10 @@ namespace _3_GUI_PresetationLayer
             Txt_TenSP.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[0].Value.ToString();
             Txt_DonGiaNhap.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[2].Value.ToString();
             Nbx_SoLuong.Value =Convert.ToInt32(Dgrid_DSSanPham.Rows[rowIndex].Cells[1].Value);
-            Txt_TenSP.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[0].Value.ToString();
-            Txt_TenSP.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[0].Value.ToString();
+            Txt_DonGiaBan.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[3].Value.ToString();
+            Txt_GhiChu.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[4].Value.ToString();
             IdWhenClick = _QLSP.getlstSanPham().Where(c => c.TenHang == Txt_TenSP.Text).Select(c => c.MaHang).FirstOrDefault();
-            Pict_Anh.Image = Image.FromFile(_QLSP.getlstSanPham().Where(c=>c.MaHang==IdWhenClick).Select(c=>c.HinhAnh).FirstOrDefault());
+            
         }
 
         private void Btn_SuaSP_Click(object sender, EventArgs e)
