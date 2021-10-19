@@ -118,5 +118,12 @@ namespace _3_GUI_PresetationLayer
                 return sb.ToString();
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmQuenMatKhau frmQuenMatKhau = new FrmQuenMatKhau();
+            this.Hide();
+            frmQuenMatKhau.Show();
+        }
     }
 }
