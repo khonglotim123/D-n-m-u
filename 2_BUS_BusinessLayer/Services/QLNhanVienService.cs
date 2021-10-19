@@ -25,7 +25,7 @@ namespace _2_BUS_BusinessLayer.Services
             _nv = new NhanVienService();
             _nvLuu = new NhanVien();
             nhanVienView = new NhanVienView();
-            
+
         }
         public string Add(NhanVien nhanVien)
         {
@@ -56,7 +56,7 @@ namespace _2_BUS_BusinessLayer.Services
 
         public void GetLogin(string mnv)
         {
-            _nvLuu = _nv.getlstNhanVien().FirstOrDefault(c=>c.MaNv==mnv);
+            _nvLuu = _nv.getlstNhanVien().FirstOrDefault(c => c.MaNv == mnv);
         }
 
         public List<NhanVien> getlstNhanVien()
@@ -67,27 +67,23 @@ namespace _2_BUS_BusinessLayer.Services
         public NhanVien GetNhanVien()
         {
             return _nvLuu;
-        }        
+        }
 
-        public string SendMail(string from, string to, string body)
+
+        public void SendMail(string email, string matkhau)
         {
+
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 25);
+            NetworkCredential cred = new NetworkCredential("xagiang43@gmail.com", "t15032002");
             MailMessage msg = new MailMessage();
-            msg.From = new MailAddress("nilusilu3@gmail.com");
-            msg.To.Add(from);
-            msg.Subject = to;
-            msg.Body = body;
-
-            SmtpClient smt = new SmtpClient();
-            smt.Host = "smtp.gmail.com";
-            System.Net.NetworkCredential ntcd = new NetworkCredential();
-            ntcd.UserName = "nilusilu3@gmail.com";
-            ntcd.Password = "";
-            smt.Credentials = ntcd;
-            smt.EnableSsl = true;
-            smt.Port = 587;
-            smt.Send(msg);
-
-            return "Đã gửi mật khẩu về email của bạn";
+            msg.From = new MailAddress("xagiang43@gmail.com");
+            msg.To.Add(email);
+            msg.Subject = "bạn vừa tạo 1 tài khoản mới";
+            msg.Body = "chào anh/chị mật khẩu của anh chị là: " + matkhau;
+            client.Credentials = cred;
+            client.EnableSsl = true;
+            client.Send(msg);
+           
         }
 
         public string Update(NhanVien nhanVien)

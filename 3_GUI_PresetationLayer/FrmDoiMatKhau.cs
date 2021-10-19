@@ -40,7 +40,7 @@ namespace _3_GUI_PresetationLayer
             if (Txt_MatKhauMoi.Text==Txt_XacNhanMK.Text)
             {
                 _nhanVien = _lstNhanvien.FirstOrDefault(c => c.MaNv == _bangTam.Manv);
-                _nhanVien.MatKhau = Txt_MatKhauMoi.Text;
+                _nhanVien.MatKhau =CreateMD5(Txt_MatKhauMoi.Text);
                 _nhanVien.So = 1;
                 MessageBox.Show(_ql.ChagePassWord(_nhanVien));
                 FrmMain frmMain = new FrmMain();
@@ -52,6 +52,23 @@ namespace _3_GUI_PresetationLayer
                 MessageBox.Show("mật khẩu không trùng khớp", "Thông báo");
             }
             
+        }
+        public static string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
         }
     }
 }

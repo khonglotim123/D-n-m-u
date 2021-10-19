@@ -49,7 +49,7 @@ namespace _3_GUI_PresetationLayer
             }
 
 
-            if (Cmb_Email.Text == _nhanVien.Email && Txt_MatKhau.Text == _nhanVien.MatKhau && _nhanVien.TinhTrang == 1 && _nhanVien.TrangThai == 0)
+            if (Cmb_Email.Text == _nhanVien.Email && Txt_MatKhau.Text == CreateMD5(_nhanVien.MatKhau) && _nhanVien.TinhTrang == 1 && _nhanVien.TrangThai == 0)
             {
                 BangTam bangTam = new BangTam();
                 bangTam.Id = _nhanVien.Id;
@@ -99,6 +99,23 @@ namespace _3_GUI_PresetationLayer
                 this.Hide();
                 FrmMain frmMain = new FrmMain();
                 frmMain.Show();
+            }
+        }
+        public static string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
             }
         }
     }

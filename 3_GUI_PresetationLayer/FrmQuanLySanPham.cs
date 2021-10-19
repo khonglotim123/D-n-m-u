@@ -32,7 +32,7 @@ namespace _3_GUI_PresetationLayer
         void LoadData()
         {
             DataGridViewButtonColumn Xacnhan = new DataGridViewButtonColumn();
-            Xacnhan.Name = "Xóa";
+            Xacnhan.Name = "Xacnhan";
             Xacnhan.HeaderText = "Xác nhận";
             Xacnhan.UseColumnTextForButtonValue = true;
             Xacnhan.Text = "Xác nhận";
@@ -41,7 +41,7 @@ namespace _3_GUI_PresetationLayer
             cmb.HeaderText = "Chức năng";
             cmb.Items.Add("Xóa");
             cmb.Items.Add("Sửa");
-            cmb.Name = "Chức năng";
+            cmb.Name = "combobox";
 
             Dgrid_DSSanPham.ColumnCount = 7;
             Dgrid_DSSanPham.Columns[0].Name = "Tên sản phẩm";
@@ -78,6 +78,7 @@ namespace _3_GUI_PresetationLayer
         private void Dgrid_DSSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
+            var columns = e.ColumnIndex;
             if (rowIndex == _QLSP.getlstSanPham().Count) return;
             Txt_TenSP.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[0].Value.ToString();
             Txt_DonGiaNhap.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[2].Value.ToString();
@@ -85,7 +86,13 @@ namespace _3_GUI_PresetationLayer
             Txt_DonGiaBan.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[3].Value.ToString();
             Txt_GhiChu.Text = Dgrid_DSSanPham.Rows[rowIndex].Cells[4].Value.ToString();
             IdWhenClick = _QLSP.getlstSanPham().Where(c => c.TenHang == Txt_TenSP.Text).Select(c => c.MaHang).FirstOrDefault();
-            
+            if (e.ColumnIndex == Dgrid_DSSanPham.Columns["Xacnhan"].Index)
+            {
+                if (e.ColumnIndex == Dgrid_DSSanPham.Columns["combobox"].Index)
+                {
+
+                }                
+            }
         }
 
         private void Btn_SuaSP_Click(object sender, EventArgs e)

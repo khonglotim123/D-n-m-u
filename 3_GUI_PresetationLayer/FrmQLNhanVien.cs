@@ -19,12 +19,14 @@ namespace _3_GUI_PresetationLayer
     {
         List<NhanVien> _lstNhanVien;
         IQLNhanVienService _qlNhanVien;
+        NhanVien _nv;
         string IdWhenClick;
         public FrmQLNhanVien()
         {
             InitializeComponent();
             _lstNhanVien = new List<NhanVien>();
             _qlNhanVien = new QLNhanVienService();
+            _nv = new NhanVien();
             _lstNhanVien = _qlNhanVien.getlstNhanVien();
             LoadData();
         }
@@ -69,14 +71,15 @@ namespace _3_GUI_PresetationLayer
             nhanVien.DiaChi = Txt_DiaChiNv.Text;
             nhanVien.TeNv = Txt_TenNv.Text;
             nhanVien.TinhTrang = (byte)(Cbx_HD.Checked ? 1 : 0);
-            nhanVien.MatKhau = _qlNhanVien.CreatPassWord(6);
+            nhanVien.MatKhau = (_qlNhanVien.CreatPassWord(6));
             nhanVien.VaiTro = (byte)(Rbt_NhanVien.Checked ? 1 : 0);
             nhanVien.So = 0;
             nhanVien.TrangThai = 0;
             MessageBox.Show(_qlNhanVien.Add(nhanVien), "Thông báo");
-            //MessageBox.Show(_qlNhanVien.SendMail("giangaxa12345@gmail.com",Txt_EmailNv.Text,nhanVien.MatKhau), "Thông Báo");
+            _qlNhanVien.SendMail(nhanVien.Email, nhanVien.MatKhau);
             LoadData();
         }
+        
 
         private void Btn_SuaNv_Click(object sender, EventArgs e)
         {

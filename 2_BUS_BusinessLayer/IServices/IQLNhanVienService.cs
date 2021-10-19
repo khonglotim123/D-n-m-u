@@ -14,9 +14,9 @@ namespace _2_BUS_BusinessLayer.IServices
         string Update(NhanVien nhanVien);
         string Delete(NhanVien nhanVien);
         string CreatPassWord(int a);
-        string SendMail(string from, string to, string body);
         void GetLogin(string mnv);
         NhanVien  GetNhanVien();
         string ChagePassWord(NhanVien nhanVien);
+        void SendMail(string email, string matkhau);
     }
 }
