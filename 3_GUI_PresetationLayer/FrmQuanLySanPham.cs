@@ -145,5 +145,12 @@ namespace _3_GUI_PresetationLayer
         {
             LoadData(Txt_TimKiemSP.Text);
         }
+
+        private void Btn_TroLai_Click(object sender, EventArgs e)
+        {
+            FrmMain frmMain = new FrmMain();
+            this.Hide();
+            frmMain.Show();
+        }
     }
 }

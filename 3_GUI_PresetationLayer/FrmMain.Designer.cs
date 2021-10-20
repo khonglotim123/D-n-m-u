@@ -133,6 +133,7 @@ namespace _3_GUI_PresetationLayer
             this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
             this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kháchHàngToolStripMenuItem.Text = "khách Hàng";
+            this.kháchHàngToolStripMenuItem.Click += new System.EventHandler(this.kháchHàngToolStripMenuItem_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -145,7 +146,7 @@ namespace _3_GUI_PresetationLayer
             // thốngKêSảnPhẩmToolStripMenuItem
             // 
             this.thốngKêSảnPhẩmToolStripMenuItem.Name = "thốngKêSảnPhẩmToolStripMenuItem";
-            this.thốngKêSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.thốngKêSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.thốngKêSảnPhẩmToolStripMenuItem.Text = "Thống kê Sản Phẩm";
             // 
             // hướngDẫnToolStripMenuItem

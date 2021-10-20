@@ -129,5 +129,12 @@ namespace _3_GUI_PresetationLayer
                 
             }
         }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmKhachHang frmKhachHang = new FrmKhachHang();
+            this.Hide();
+            frmKhachHang.Show();
+        }
     }
 }
