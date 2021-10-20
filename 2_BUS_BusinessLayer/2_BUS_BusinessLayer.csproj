@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Ultities\" />
+    <Compile Remove="Ultities\**" />
+    <EmbeddedResource Remove="Ultities\**" />
+    <None Remove="Ultities\**" />
   </ItemGroup>
 
   <ItemGroup>

@@ -14,6 +14,7 @@ namespace _1_DAL_DataAccessLayer.DALServices
         string Update(NhanVien nhanVien);
         string Delete(NhanVien nhanVien);
         string ChagePassWord(NhanVien nhanVien);
+        
 
     }
 }

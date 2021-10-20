@@ -58,7 +58,7 @@ namespace _3_GUI_PresetationLayer
             }
             _nhanVien.MatKhau = _qlNhanVien.CreatPassWord(6);
             _nhanVien.So = 0;
-            MessageBox.Show(_qlNhanVien.Update(_nhanVien),"Thông báo");
+            MessageBox.Show(_qlNhanVien.ChagePassWord(_nhanVien),"Thông báo");
             SendMail(_nhanVien.Email, _nhanVien.MatKhau);
 
         }

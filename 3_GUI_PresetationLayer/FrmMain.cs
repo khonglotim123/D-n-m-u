@@ -70,22 +70,19 @@ namespace _3_GUI_PresetationLayer
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (_lstbangtam.Count != 0)
-            {
-                FrmQuanLySanPham frmQuanLySanPham = new FrmQuanLySanPham();                
-                frmQuanLySanPham.Show();
-            }
-            else
-            {
-                MessageBox.Show("Bạn cần phải đăng nhập trước","Thông báo");
-            }
+
+            FrmQuanLySanPham frmQuanLySanPham = new FrmQuanLySanPham();
+            this.Hide();
+            frmQuanLySanPham.Show();
+
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (_lstbangtam.Count != 0 && _bangtam.VaiTro==0)
+            if (_lstbangtam.Count != 0 && _bangtam.VaiTro == 0)
             {
                 FrmQLNhanVien frmQLNhanVien = new FrmQLNhanVien();
+                this.Hide();
                 frmQLNhanVien.Show();
             }
             else if (_lstbangtam.Count == 0)
@@ -94,11 +91,11 @@ namespace _3_GUI_PresetationLayer
             }
             else if (_lstbangtam.Count != 0 && _bangtam.VaiTro == 1)
             {
-                MessageBox.Show("Chỉ quản lý mới có thể truy cập","Thông báo");
-            }           
-            
-        }             
-        
+                MessageBox.Show("Chỉ quản lý mới có thể truy cập", "Thông báo");
+            }
+
+        }
+
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -106,8 +103,30 @@ namespace _3_GUI_PresetationLayer
                 if (_bangtam != null)
                 {
                     _BT.DeleteBangTam(_bangtam);
+                    Application.Exit();
                 }
-                Application.Exit();
+                else
+                {
+                    Application.Exit();
+                }
+                
+            }
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (_bangtam != null)
+                {
+                    _BT.DeleteBangTam(_bangtam);
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+                
             }
         }
     }

@@ -17,7 +17,7 @@ namespace _3_GUI_PresetationLayer
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDangNhap());
+            Application.Run(new FrmMain());
         }
     }
 }
