@@ -1,6 +1,7 @@
 ﻿using _1_DAL_DataAccessLayer.Models;
 using _2_BUS_BusinessLayer.IServices;
 using _2_BUS_BusinessLayer.Services;
+using _2_BUS_BusinessLayer.Ulities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace _3_GUI_PresetationLayer
         List<BangTam> _lstBangTam;
         BangTam _bangTam;
         NhanVien _nhanVien;
+        ICheck _check;
         public FrmDoiMatKhau()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace _3_GUI_PresetationLayer
             _ql = new QLNhanVienService();
             _lstNhanvien = new List<NhanVien>();
             _nhanVien = new NhanVien();
+            _check = new Check();
             _Bt = new BangTamService();
             _lstBangTam = new List<BangTam>();
             _lstBangTam = _Bt.getBangTam();
@@ -37,6 +40,11 @@ namespace _3_GUI_PresetationLayer
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)
         {
+            if (_check.CheckNull(Txt_MatKhauMoi.Text)==false || _check.CheckNull(Txt_XacNhanMK.Text) == false)
+            {
+                MessageBox.Show("Không được để trống");
+                return;
+            }
             if (Txt_MatKhauMoi.Text==Txt_XacNhanMK.Text)
             {
                 _nhanVien = _lstNhanvien.FirstOrDefault(c => c.MaNv == _bangTam.Manv);

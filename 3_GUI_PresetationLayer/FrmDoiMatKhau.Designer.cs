@@ -164,6 +164,7 @@ namespace _3_GUI_PresetationLayer
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmDoiMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDoiMatKhau";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -325,6 +325,7 @@ namespace _3_GUI_PresetationLayer
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FrmQLNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQLNhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_NhanVien)).EndInit();
             this.groupBox1.ResumeLayout(false);

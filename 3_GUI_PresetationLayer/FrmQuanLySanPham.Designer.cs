@@ -310,6 +310,7 @@ namespace _3_GUI_PresetationLayer
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmQuanLySanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuanLySanPham";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_DSSanPham)).EndInit();

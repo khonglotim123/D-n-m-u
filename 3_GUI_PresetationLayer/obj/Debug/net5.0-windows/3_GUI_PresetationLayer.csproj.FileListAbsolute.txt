@@ -61,3 +61,4 @@ E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\3_GUI_Presetat
 E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\3_GUI_PresetationLayer\obj\Debug\net5.0-windows\_3_GUI_PresetationLayer.FrmMain.resources
 E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\3_GUI_PresetationLayer\obj\Debug\net5.0-windows\_3_GUI_PresetationLayer.Properties.Resources.resources
 E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\3_GUI_PresetationLayer\obj\Debug\net5.0-windows\_3_GUI_PresetationLayer.FrmQuenMatKhau.resources
+E:\dữ liệu mới ổ c\Dự án mẫu\BaiThu4_DAM_XagaPH13499\3_GUI_PresetationLayer\obj\Debug\net5.0-windows\_3_GUI_PresetationLayer.FrmKhachHang.resources

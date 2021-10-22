@@ -11,6 +11,7 @@ using _1_DAL_DataAccessLayer.Models;
 using _2_BUS_BusinessLayer.IServices;
 using _2_BUS_BusinessLayer.Services;
 using _2_BUS_BusinessLayer.Models;
+using _2_BUS_BusinessLayer.Ulities;
 
 namespace _3_GUI_PresetationLayer
 {
@@ -22,6 +23,8 @@ namespace _3_GUI_PresetationLayer
         IBangTamService _bangTam;
         List<BangTam> _lstBangtam;
         BangTam _Bt;
+        ICheck _check;
+
 
         public FrmDangNhap()
         {
@@ -33,13 +36,14 @@ namespace _3_GUI_PresetationLayer
             _lstNhanVien = _qlNhanVien.getlstNhanVien();
             _bangTam = new BangTamService();
             _lstBangtam = new List<BangTam>();
-            _lstBangtam = _bangTam.getBangTam();           
+            _lstBangtam = _bangTam.getBangTam();
+            _check = new Check();
 
         }       
 
         private void Btn_DangNhap_Click(object sender, EventArgs e)
         {
-
+            
             for (int i = 0; i < _lstNhanVien.Count; i++)
             {
                 if (Cmb_Email.Text == _lstNhanVien[i].Email)
@@ -49,7 +53,7 @@ namespace _3_GUI_PresetationLayer
             }
 
 
-            if (Cmb_Email.Text == _nhanVien.Email && Txt_MatKhau.Text == CreateMD5(_nhanVien.MatKhau) && _nhanVien.TinhTrang == 1 && _nhanVien.TrangThai == 0)
+            if (Txt_MatKhau.Text == CreateMD5(_nhanVien.MatKhau) && _nhanVien.TinhTrang == 1 && _nhanVien.TrangThai == 0)
             {
                 BangTam bangTam = new BangTam();
                 bangTam.Id = _nhanVien.Id;
@@ -78,15 +82,14 @@ namespace _3_GUI_PresetationLayer
                     frmMain.Show();
                 }
             }
-            else if (_nhanVien.TrangThai==1)
+            if (_check.CheckNull(Cmb_Email.Text) == false || _check.CheckNull(Txt_MatKhau.Text) == false)
             {
-                MessageBox.Show("Không có tài khoản này", "Thông báo");
+                MessageBox.Show("Không được để trống", "Thông báo");
                 return;
             }
-            else if (_nhanVien.TinhTrang==0)
-            {
-                
-                MessageBox.Show("Tài khoản này không còn hoạt động", "Thông Báo");
+            if (_nhanVien.TrangThai == 1 || _nhanVien.TinhTrang == 0)
+            {                
+                MessageBox.Show("Không có tài khoản này", "Thông Báo");
                 return;
             }
            

@@ -238,6 +238,7 @@ namespace _3_GUI_PresetationLayer
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "FrmKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKhachHang";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_KhachHang)).EndInit();
