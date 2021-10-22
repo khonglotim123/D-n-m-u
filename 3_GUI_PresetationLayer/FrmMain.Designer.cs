@@ -96,7 +96,8 @@ namespace _3_GUI_PresetationLayer
             this.hồSơNhânViênToolStripMenuItem.Image = global::_3_GUI_PresetationLayer.Properties.Resources.add;
             this.hồSơNhânViênToolStripMenuItem.Name = "hồSơNhânViênToolStripMenuItem";
             this.hồSơNhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.hồSơNhânViênToolStripMenuItem.Text = "Hồ sơ nhân viên";
+            this.hồSơNhânViênToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.hồSơNhânViênToolStripMenuItem.Click += new System.EventHandler(this.hồSơNhânViênToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 

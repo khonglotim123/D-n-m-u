@@ -155,10 +155,27 @@ namespace _3_GUI_PresetationLayer
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất không không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (_bangtam != null)
+                {
+                    _BT.DeleteBangTam(_bangtam);
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
                 FrmDangNhap frmDangNhap = new FrmDangNhap();
                 this.Hide();
                 frmDangNhap.Show();
+                
             }
+        }
+
+        private void hồSơNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDoiMatKhau frmDoiMatKhau = new FrmDoiMatKhau();
+            this.Hide();
+            frmDoiMatKhau.Show();
         }
     }
 }
