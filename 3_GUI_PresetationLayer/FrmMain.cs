@@ -150,5 +150,15 @@ namespace _3_GUI_PresetationLayer
             this.Hide();
             frmThongKeTonKho.Show();
         }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất không không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FrmDangNhap frmDangNhap = new FrmDangNhap();
+                this.Hide();
+                frmDangNhap.Show();
+            }
+        }
     }
 }

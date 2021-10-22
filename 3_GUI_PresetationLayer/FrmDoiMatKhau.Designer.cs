@@ -179,6 +179,7 @@ namespace _3_GUI_PresetationLayer
             this.Name = "FrmDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDoiMatKhau";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmDoiMatKhau_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

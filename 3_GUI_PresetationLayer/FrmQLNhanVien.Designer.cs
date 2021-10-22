@@ -340,6 +340,7 @@ namespace _3_GUI_PresetationLayer
             this.Name = "FrmQLNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQLNhanVien";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmQLNhanVien_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_NhanVien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);

@@ -77,6 +77,7 @@ namespace _3_GUI_PresetationLayer
             this.Name = "FrmThongKeSanPhamNhapKho";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmThongKeSanPhamNhapKho";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmThongKeSanPhamNhapKho_FormClosed);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_SPNK)).EndInit();
             this.ResumeLayout(false);

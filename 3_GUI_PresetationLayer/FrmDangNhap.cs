@@ -37,7 +37,7 @@ namespace _3_GUI_PresetationLayer
             _bangTam = new BangTamService();
             _lstBangtam = new List<BangTam>();
             _lstBangtam = _bangTam.getBangTam();
-            _check = new Check();
+            _check = new Check();            
 
         }       
 
@@ -98,9 +98,16 @@ namespace _3_GUI_PresetationLayer
         {
             if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Hide();
-                FrmMain frmMain = new FrmMain();
-                frmMain.Show();
+                if (_Bt != null)
+                {
+                    _bangTam.DeleteBangTam(_Bt);
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
             }
         }
         public static string CreateMD5(string input)
@@ -126,6 +133,23 @@ namespace _3_GUI_PresetationLayer
             FrmQuenMatKhau frmQuenMatKhau = new FrmQuenMatKhau();
             this.Hide();
             frmQuenMatKhau.Show();
+        }
+
+        private void FrmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (_Bt != null)
+                {
+                    _bangTam.DeleteBangTam(_Bt);
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+            }
         }
     }
 }

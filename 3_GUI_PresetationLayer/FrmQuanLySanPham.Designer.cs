@@ -321,6 +321,7 @@ namespace _3_GUI_PresetationLayer
             this.Name = "FrmQuanLySanPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuanLySanPham";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmQuanLySanPham_FormClosed);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_DSSanPham)).EndInit();
             this.menuStrip1.ResumeLayout(false);

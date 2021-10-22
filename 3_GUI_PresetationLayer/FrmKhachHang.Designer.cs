@@ -267,6 +267,7 @@ namespace _3_GUI_PresetationLayer
             this.Name = "FrmKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmKhachHang";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmKhachHang_FormClosed);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_KhachHang)).EndInit();
             this.ResumeLayout(false);

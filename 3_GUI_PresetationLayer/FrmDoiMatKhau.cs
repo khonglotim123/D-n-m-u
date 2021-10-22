@@ -23,6 +23,8 @@ namespace _3_GUI_PresetationLayer
         BangTam _bangTam;
         NhanVien _nhanVien;
         ICheck _check;
+        BangTam _bangtam;
+        IBangTamService _BT;
         public FrmDoiMatKhau()
         {
             InitializeComponent();
@@ -35,7 +37,10 @@ namespace _3_GUI_PresetationLayer
             _lstBangTam = new List<BangTam>();
             _lstBangTam = _Bt.getBangTam();
             _bangTam = _lstBangTam.FirstOrDefault();
-            _lstNhanvien = _ql.getlstNhanVien();           
+            _lstNhanvien = _ql.getlstNhanVien();
+            _bangtam = new BangTam();
+            _BT = new BangTamService();
+            _bangtam = _BT.getBangTam().FirstOrDefault();
         }
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)
@@ -84,6 +89,23 @@ namespace _3_GUI_PresetationLayer
             FrmDangNhap frmDangNhap = new FrmDangNhap();
             this.Hide();
             frmDangNhap.Show();
+        }
+
+        private void FrmDoiMatKhau_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (_bangtam != null)
+                {
+                    _BT.DeleteBangTam(_bangtam);
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+            }
         }
     }
 }

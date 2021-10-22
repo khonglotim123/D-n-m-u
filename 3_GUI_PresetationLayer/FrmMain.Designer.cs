@@ -79,7 +79,7 @@ namespace _3_GUI_PresetationLayer
             // 
             this.đăngNhậpToolStripMenuItem.Image = global::_3_GUI_PresetationLayer.Properties.Resources.add;
             this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngNhậpToolStripMenuItem.Text = "Đăng nhập";
             this.đăngNhậpToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
@@ -87,21 +87,22 @@ namespace _3_GUI_PresetationLayer
             // 
             this.đăngXuấtToolStripMenuItem.Image = global::_3_GUI_PresetationLayer.Properties.Resources.add;
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // hồSơNhânViênToolStripMenuItem
             // 
             this.hồSơNhânViênToolStripMenuItem.Image = global::_3_GUI_PresetationLayer.Properties.Resources.add;
             this.hồSơNhânViênToolStripMenuItem.Name = "hồSơNhânViênToolStripMenuItem";
-            this.hồSơNhânViênToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.hồSơNhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.hồSơNhânViênToolStripMenuItem.Text = "Hồ sơ nhân viên";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Image = global::_3_GUI_PresetationLayer.Properties.Resources.hdicon;
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -210,6 +211,7 @@ namespace _3_GUI_PresetationLayer
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.menuStrip1.ResumeLayout(false);

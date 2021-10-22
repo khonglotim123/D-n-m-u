@@ -145,6 +145,7 @@ namespace _3_GUI_PresetationLayer
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDangNhap";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmDangNhap_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

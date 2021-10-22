@@ -17,10 +17,11 @@ namespace _3_GUI_PresetationLayer
     public partial class FrmQuanLySanPham : Form
     {
         IBangTamService _BT;
-        IQLSanPhamService _QLSP;
+        IQLSanPhamService _QLSP;     
         BangTam _bangTam;
         int IdWhenClick;
         string link;
+
         public FrmQuanLySanPham()
         {
             InitializeComponent();
@@ -29,6 +30,9 @@ namespace _3_GUI_PresetationLayer
             _bangTam = new BangTam();
             _bangTam = _BT.getBangTam().FirstOrDefault();
             Txt_id.Enabled = false;
+            _bangTam = new BangTam();
+            _BT = new BangTamService();
+            _bangTam = _BT.getBangTam().FirstOrDefault();
             LoadData();
         }
         void LoadData()
@@ -209,6 +213,23 @@ namespace _3_GUI_PresetationLayer
             FrmMain frmMain = new FrmMain();
             this.Hide();
             frmMain.Show();
+        }
+
+        private void FrmQuanLySanPham_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (_bangTam != null)
+                {
+                    _BT.DeleteBangTam(_bangTam);
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+            }
         }
     }
 }

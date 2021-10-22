@@ -96,6 +96,7 @@ namespace _3_GUI_PresetationLayer
             this.Name = "FrmQuenMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuenMatKhau";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmQuenMatKhau_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

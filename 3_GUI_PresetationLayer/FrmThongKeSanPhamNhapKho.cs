@@ -17,11 +17,16 @@ namespace _3_GUI_PresetationLayer
     {
         IQLNhanVienService _qlNhanVien;
         IQLSanPhamService _qlSanPham;
+        BangTam _bangtam;
+        IBangTamService _BT;
         public FrmThongKeSanPhamNhapKho()
         {
             InitializeComponent();
             _qlNhanVien = new QLNhanVienService();
-            _qlSanPham = new QLSanPhamService();            
+            _qlSanPham = new QLSanPhamService();
+            _bangtam = new BangTam();
+            _BT = new BangTamService();
+            _bangtam = _BT.getBangTam().FirstOrDefault();
             LoadData();
         }
         void LoadData()
@@ -42,6 +47,23 @@ namespace _3_GUI_PresetationLayer
             FrmMain frmMain = new FrmMain();
             this.Hide();
             frmMain.Show();
+        }
+
+        private void FrmThongKeSanPhamNhapKho_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (_bangtam != null)
+                {
+                    _BT.DeleteBangTam(_bangtam);
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+            }
         }
     }
 }

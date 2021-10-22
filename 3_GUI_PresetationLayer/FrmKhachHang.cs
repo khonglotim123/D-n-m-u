@@ -18,6 +18,8 @@ namespace _3_GUI_PresetationLayer
         BangTam _bangTam;
         IQLKhachHangService _qlKhachHang;
         IBangTamService _qlbangTam;
+        BangTam _bangtam;
+        IBangTamService _BT;
         int id;
         public FrmKhachHang()
         {
@@ -27,6 +29,9 @@ namespace _3_GUI_PresetationLayer
             _bangTam = _qlbangTam.getBangTam().FirstOrDefault();
             _qlKhachHang = new QLKhachHangService();
             Txt_Id.Enabled = false;
+            _bangtam = new BangTam();
+            _BT = new BangTamService();
+            _bangtam = _BT.getBangTam().FirstOrDefault();
             LoadData();
         }
         void LoadData()
@@ -213,6 +218,23 @@ namespace _3_GUI_PresetationLayer
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmKhachHang_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (_bangtam != null)
+                {
+                    _BT.DeleteBangTam(_bangtam);
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+            }
         }
     }
 }
