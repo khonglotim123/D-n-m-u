@@ -126,7 +126,7 @@ namespace _3_GUI_PresetationLayer
             this.Cmb_Email.Name = "Cmb_Email";
             this.Cmb_Email.Size = new System.Drawing.Size(205, 23);
             this.Cmb_Email.TabIndex = 27;
-            this.Cmb_Email.Text = "giangaxa12345@gmail.com";
+            this.Cmb_Email.Text = "xagaph13499@fpt.edu.vn";
             // 
             // FrmDangNhap
             // 

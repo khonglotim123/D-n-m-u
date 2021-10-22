@@ -109,7 +109,7 @@ namespace _3_GUI_PresetationLayer
                 {
                     Application.Exit();
                 }
-                
+
             }
         }
 
@@ -126,7 +126,7 @@ namespace _3_GUI_PresetationLayer
                 {
                     Application.Exit();
                 }
-                
+
             }
         }
 
@@ -139,16 +139,34 @@ namespace _3_GUI_PresetationLayer
 
         private void thốngKêSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmThongKeSanPhamNhapKho frmThongKeSanPhamNhapKho = new FrmThongKeSanPhamNhapKho();
-            this.Hide();
-            frmThongKeSanPhamNhapKho.Show();
+            if (_bangtam.VaiTro == 0)
+            {
+                FrmThongKeSanPhamNhapKho frmThongKeSanPhamNhapKho = new FrmThongKeSanPhamNhapKho();
+                this.Hide();
+                frmThongKeSanPhamNhapKho.Show();
+            }
+            else if (_bangtam.VaiTro == 1)
+            {
+                MessageBox.Show("Chỉ quản lý mới có thể truy cập", "Thông báo");
+                return;
+            }
+
         }
 
         private void thốngKêTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmThongKeTonKho frmThongKeTonKho = new FrmThongKeTonKho();
-            this.Hide();
-            frmThongKeTonKho.Show();
+            if (_bangtam.VaiTro == 0)
+            {
+                FrmThongKeTonKho frmThongKeTonKho = new FrmThongKeTonKho();
+                this.Hide();
+                frmThongKeTonKho.Show();
+            }
+            else if (_bangtam.VaiTro == 1)
+            {
+                MessageBox.Show("Chỉ quản lý mới có thể truy cập", "Thông báo");
+                return;
+            }
+            
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,17 +175,12 @@ namespace _3_GUI_PresetationLayer
             {
                 if (_bangtam != null)
                 {
-                    _BT.DeleteBangTam(_bangtam);
-                    Application.Exit();
-                }
-                else
-                {
-                    Application.Exit();
-                }
+                    _BT.DeleteBangTam(_bangtam);                    
+                }                
                 FrmDangNhap frmDangNhap = new FrmDangNhap();
                 this.Hide();
                 frmDangNhap.Show();
-                
+
             }
         }
 
