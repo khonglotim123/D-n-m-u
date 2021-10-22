@@ -27,7 +27,7 @@ namespace _1_DAL_DataAccessLayer.DALService
         {
             _dbContext.NhanViens.Update(nhanVien);
             _dbContext.SaveChanges();
-            return "Đổi mật khẩu thành công";
+            return null;
         }
 
         public string Delete(NhanVien nhanVien)

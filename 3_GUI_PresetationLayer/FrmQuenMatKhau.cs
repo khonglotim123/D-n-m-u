@@ -58,9 +58,11 @@ namespace _3_GUI_PresetationLayer
             }
             _nhanVien.MatKhau = _qlNhanVien.CreatPassWord(6);
             _nhanVien.So = 0;
-            MessageBox.Show(_qlNhanVien.ChagePassWord(_nhanVien),"Thông báo");
+            _qlNhanVien.ChagePassWord(_nhanVien);
             SendMail(_nhanVien.Email, _nhanVien.MatKhau);
-            _nhanVien.MatKhau = 
+            _nhanVien.MatKhau = CreateMD5(_nhanVien.MatKhau);
+            MessageBox.Show("Đổi mật khẩu thành công", _qlNhanVien.ChagePassWord(_nhanVien));
+
 
         }
         public static string CreateMD5(string input)
