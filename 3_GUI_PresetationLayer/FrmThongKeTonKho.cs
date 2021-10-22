@@ -16,9 +16,13 @@ namespace _3_GUI_PresetationLayer
     public partial class FrmThongKeTonKho : Form
     {
         IQLSanPhamService _qLSanPham;
+        List<Hang> _lstHang;
         public FrmThongKeTonKho()
         {
             _qLSanPham = new QLSanPhamService();
+            _lstHang = new List<Hang>();
+            _lstHang = _qLSanPham.getlstSanPham();
+            LoadData();
         }
         void LoadData()
         {
@@ -26,7 +30,7 @@ namespace _3_GUI_PresetationLayer
             Dgrid_TonKho.Columns[0].Name = "Tên sản phẩm";
             Dgrid_TonKho.Columns[1].Name = "Số lượng tồn kho";
             Dgrid_TonKho.Rows.Clear();
-            foreach (var x in _qLSanPham.getlstSanPham().Where(c=>c.TrangThai==0))
+            foreach (var x in _lstHang.Where(c=>c.TrangThai==0))
             {
                 Dgrid_TonKho.Rows.Add(x.TenHang,x.SoLuong);
             }

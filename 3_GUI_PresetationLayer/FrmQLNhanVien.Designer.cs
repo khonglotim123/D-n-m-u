@@ -55,6 +55,7 @@ namespace _3_GUI_PresetationLayer
             this.quảnLýKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_TroLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_NhanVien)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -300,11 +301,23 @@ namespace _3_GUI_PresetationLayer
             this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
+            // Btn_TroLai
+            // 
+            this.Btn_TroLai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn_TroLai.Location = new System.Drawing.Point(385, 495);
+            this.Btn_TroLai.Name = "Btn_TroLai";
+            this.Btn_TroLai.Size = new System.Drawing.Size(117, 49);
+            this.Btn_TroLai.TabIndex = 65;
+            this.Btn_TroLai.Text = "Trở lại";
+            this.Btn_TroLai.UseVisualStyleBackColor = true;
+            this.Btn_TroLai.Click += new System.EventHandler(this.Btn_TroLai_Click);
+            // 
             // FrmQLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 566);
+            this.Controls.Add(this.Btn_TroLai);
             this.Controls.Add(this.Cbx_KHD);
             this.Controls.Add(this.Cbx_HD);
             this.Controls.Add(this.Rbt_QuanLy);
@@ -363,5 +376,6 @@ namespace _3_GUI_PresetationLayer
         private System.Windows.Forms.ToolStripMenuItem quảnLýKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
+        private System.Windows.Forms.Button Btn_TroLai;
     }
 }

@@ -40,17 +40,17 @@ namespace _3_GUI_PresetationLayer
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)
         {
-            if (_check.CheckNull(Txt_MatKhauMoi.Text)==false || _check.CheckNull(Txt_XacNhanMK.Text) == false)
-            {
-                MessageBox.Show("Không được để trống");
-                return;
-            }
+            //if (_check.CheckNull(Txt_MatKhauMoi.Text)==false || _check.CheckNull(Txt_XacNhanMK.Text) == false)
+            //{
+            //    MessageBox.Show("Không được để trống");
+            //    return;
+            //}
             if (Txt_MatKhauMoi.Text==Txt_XacNhanMK.Text)
             {
                 _nhanVien = _lstNhanvien.FirstOrDefault(c => c.MaNv == _bangTam.Manv);
                 _nhanVien.MatKhau =CreateMD5(Txt_MatKhauMoi.Text);
                 _nhanVien.So = 1;
-                MessageBox.Show(_ql.ChagePassWord(_nhanVien));
+                MessageBox.Show("đổi mật khẩu thành công",_ql.ChagePassWord(_nhanVien));
                 FrmMain frmMain = new FrmMain();
                 this.Hide();
                 frmMain.Show();
@@ -77,6 +77,13 @@ namespace _3_GUI_PresetationLayer
                 }
                 return sb.ToString();
             }
+        }
+
+        private void Btn_Thoat_Click(object sender, EventArgs e)
+        {
+            FrmDangNhap frmDangNhap = new FrmDangNhap();
+            this.Hide();
+            frmDangNhap.Show();
         }
     }
 }

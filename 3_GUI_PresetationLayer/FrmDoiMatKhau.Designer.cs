@@ -42,6 +42,7 @@ namespace _3_GUI_PresetationLayer
             this.quảnLýKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Btn_Thoat = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +81,7 @@ namespace _3_GUI_PresetationLayer
             // Btn_XacNhan
             // 
             this.Btn_XacNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Btn_XacNhan.Location = new System.Drawing.Point(146, 285);
+            this.Btn_XacNhan.Location = new System.Drawing.Point(212, 288);
             this.Btn_XacNhan.Name = "Btn_XacNhan";
             this.Btn_XacNhan.Size = new System.Drawing.Size(113, 40);
             this.Btn_XacNhan.TabIndex = 13;
@@ -150,11 +151,23 @@ namespace _3_GUI_PresetationLayer
             this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
             // 
+            // Btn_Thoat
+            // 
+            this.Btn_Thoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Btn_Thoat.Location = new System.Drawing.Point(70, 288);
+            this.Btn_Thoat.Name = "Btn_Thoat";
+            this.Btn_Thoat.Size = new System.Drawing.Size(113, 40);
+            this.Btn_Thoat.TabIndex = 19;
+            this.Btn_Thoat.Text = "Thoát";
+            this.Btn_Thoat.UseVisualStyleBackColor = true;
+            this.Btn_Thoat.Click += new System.EventHandler(this.Btn_Thoat_Click);
+            // 
             // FrmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 374);
+            this.Controls.Add(this.Btn_Thoat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Txt_XacNhanMK);
@@ -188,5 +201,6 @@ namespace _3_GUI_PresetationLayer
         private System.Windows.Forms.ToolStripMenuItem quảnLýKháchHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
+        private System.Windows.Forms.Button Btn_Thoat;
     }
 }

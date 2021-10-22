@@ -58,12 +58,10 @@ namespace _3_GUI_PresetationLayer
             // 
             // Dgrid_TonKho
             // 
-            this.Dgrid_TonKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgrid_TonKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgrid_TonKho.Location = new System.Drawing.Point(7, 23);
             this.Dgrid_TonKho.Name = "Dgrid_TonKho";
             this.Dgrid_TonKho.RowTemplate.Height = 25;
-            this.Dgrid_TonKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgrid_TonKho.Size = new System.Drawing.Size(763, 286);
             this.Dgrid_TonKho.TabIndex = 0;
             // 
