@@ -37,7 +37,7 @@ namespace _2_BUS_BusinessLayer.Ulities
 
         public bool CheckNull(string input)
         {
-            if (input==null)
+            if (input == string.Empty)
             {
                 return false;
             }

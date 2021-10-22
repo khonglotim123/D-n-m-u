@@ -54,6 +54,7 @@ namespace _3_GUI_PresetationLayer
             this.Pict_Anh = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Btn_TroLai = new System.Windows.Forms.Button();
+            this.Txt_id = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_DSSanPham)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -267,7 +268,7 @@ namespace _3_GUI_PresetationLayer
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(716, 101);
+            this.label7.Location = new System.Drawing.Point(716, 103);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 19);
             this.label7.TabIndex = 33;
@@ -283,11 +284,19 @@ namespace _3_GUI_PresetationLayer
             this.Btn_TroLai.UseVisualStyleBackColor = true;
             this.Btn_TroLai.Click += new System.EventHandler(this.Btn_TroLai_Click);
             // 
+            // Txt_id
+            // 
+            this.Txt_id.Location = new System.Drawing.Point(896, 19);
+            this.Txt_id.Name = "Txt_id";
+            this.Txt_id.Size = new System.Drawing.Size(34, 23);
+            this.Txt_id.TabIndex = 35;
+            // 
             // FrmQuanLySanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 497);
+            this.Controls.Add(this.Txt_id);
             this.Controls.Add(this.Btn_TroLai);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Pict_Anh);
@@ -350,5 +359,6 @@ namespace _3_GUI_PresetationLayer
         private System.Windows.Forms.PictureBox Pict_Anh;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Btn_TroLai;
+        private System.Windows.Forms.TextBox Txt_id;
     }
 }

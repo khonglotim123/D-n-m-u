@@ -41,12 +41,14 @@ namespace _3_GUI_PresetationLayer
             this.Rbt_Nam = new System.Windows.Forms.RadioButton();
             this.Rbt_Nu = new System.Windows.Forms.RadioButton();
             this.Txt_DiaChi = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Txt_Seach = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.Btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_TroLai = new System.Windows.Forms.Button();
             this.Btn_Sua = new System.Windows.Forms.Button();
             this.Btn_XoaKH = new System.Windows.Forms.Button();
+            this.Txt_Id = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgrid_KhachHang)).BeginInit();
             this.SuspendLayout();
@@ -63,12 +65,15 @@ namespace _3_GUI_PresetationLayer
             // 
             // Dgrid_KhachHang
             // 
+            this.Dgrid_KhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgrid_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgrid_KhachHang.Location = new System.Drawing.Point(6, 22);
             this.Dgrid_KhachHang.Name = "Dgrid_KhachHang";
             this.Dgrid_KhachHang.RowTemplate.Height = 25;
+            this.Dgrid_KhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgrid_KhachHang.Size = new System.Drawing.Size(859, 249);
             this.Dgrid_KhachHang.TabIndex = 0;
+            this.Dgrid_KhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgrid_KhachHang_CellClick);
             // 
             // Txt_SDT
             // 
@@ -161,12 +166,13 @@ namespace _3_GUI_PresetationLayer
             this.Txt_DiaChi.Size = new System.Drawing.Size(149, 23);
             this.Txt_DiaChi.TabIndex = 10;
             // 
-            // textBox4
+            // Txt_Seach
             // 
-            this.textBox4.Location = new System.Drawing.Point(130, 442);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(149, 23);
-            this.textBox4.TabIndex = 11;
+            this.Txt_Seach.Location = new System.Drawing.Point(130, 442);
+            this.Txt_Seach.Name = "Txt_Seach";
+            this.Txt_Seach.Size = new System.Drawing.Size(149, 23);
+            this.Txt_Seach.TabIndex = 11;
+            this.Txt_Seach.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label6
             // 
@@ -205,6 +211,7 @@ namespace _3_GUI_PresetationLayer
             this.Btn_Sua.TabIndex = 15;
             this.Btn_Sua.Text = "Sửa";
             this.Btn_Sua.UseVisualStyleBackColor = true;
+            this.Btn_Sua.Click += new System.EventHandler(this.Btn_Sua_Click);
             // 
             // Btn_XoaKH
             // 
@@ -214,18 +221,38 @@ namespace _3_GUI_PresetationLayer
             this.Btn_XoaKH.TabIndex = 16;
             this.Btn_XoaKH.Text = "Xóa";
             this.Btn_XoaKH.UseVisualStyleBackColor = true;
+            this.Btn_XoaKH.Click += new System.EventHandler(this.Btn_XoaKH_Click);
+            // 
+            // Txt_Id
+            // 
+            this.Txt_Id.Location = new System.Drawing.Point(830, 75);
+            this.Txt_Id.Name = "Txt_Id";
+            this.Txt_Id.Size = new System.Drawing.Size(20, 23);
+            this.Txt_Id.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(770, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 15);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Id:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // FrmKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(895, 491);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Txt_Id);
             this.Controls.Add(this.Btn_XoaKH);
             this.Controls.Add(this.Btn_Sua);
             this.Controls.Add(this.Btn_TroLai);
             this.Controls.Add(this.Btn_Xoa);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Txt_Seach);
             this.Controls.Add(this.Txt_DiaChi);
             this.Controls.Add(this.Rbt_Nu);
             this.Controls.Add(this.Rbt_Nam);
@@ -260,11 +287,13 @@ namespace _3_GUI_PresetationLayer
         private System.Windows.Forms.RadioButton Rbt_Nam;
         private System.Windows.Forms.RadioButton Rbt_Nu;
         private System.Windows.Forms.TextBox Txt_DiaChi;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Txt_Seach;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Btn_Xoa;
         private System.Windows.Forms.Button Btn_TroLai;
         private System.Windows.Forms.Button Btn_Sua;
         private System.Windows.Forms.Button Btn_XoaKH;
+        private System.Windows.Forms.TextBox Txt_Id;
+        private System.Windows.Forms.Label label7;
     }
 }

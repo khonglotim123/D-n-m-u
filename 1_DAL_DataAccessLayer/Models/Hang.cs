@@ -28,6 +28,8 @@ namespace _1_DAL_DataAccessLayer.Models
         [StringLength(20)]
         public string MaNv { get; set; }
         public int? TrangThai { get; set; }
+        [Column("id")]
+        public int Id { get; set; }
 
         [ForeignKey(nameof(MaNv))]
         [InverseProperty(nameof(NhanVien.Hangs))]

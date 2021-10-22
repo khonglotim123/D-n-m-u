@@ -75,11 +75,29 @@ namespace _3_GUI_PresetationLayer
             nhanVien.VaiTro = (byte)(Rbt_NhanVien.Checked ? 1 : 0);
             nhanVien.So = 0;
             nhanVien.TrangThai = 0;
-            MessageBox.Show(_qlNhanVien.Add(nhanVien), "Thông báo");
+            _qlNhanVien.Add(nhanVien);
             _qlNhanVien.SendMail(nhanVien.Email, nhanVien.MatKhau);
+            nhanVien.MatKhau = CreateMD5(nhanVien.MatKhau);
+            MessageBox.Show("Thêm thành công",_qlNhanVien.Update(nhanVien));
             LoadData();
         }
-        
+        public static string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
+        }
 
         private void Btn_SuaNv_Click(object sender, EventArgs e)
         {
@@ -90,7 +108,7 @@ namespace _3_GUI_PresetationLayer
             nhanVien.TeNv = Txt_TenNv.Text;
             nhanVien.TinhTrang = (byte)(Cbx_HD.Checked ? 1 : 0);
             nhanVien.VaiTro = (byte)(Rbt_NhanVien.Checked ? 1 : 0);
-            MessageBox.Show(_qlNhanVien.Update(nhanVien), "Thông báo");
+            MessageBox.Show("Sửa thành công",_qlNhanVien.Update(nhanVien));
             LoadData();
         }
 

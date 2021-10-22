@@ -142,6 +142,7 @@ namespace _3_GUI_PresetationLayer
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Txt_MatKhau);
             this.Name = "FrmDangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDangNhap";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -53,7 +53,7 @@ namespace _3_GUI_PresetationLayer
             }
 
 
-            if (Txt_MatKhau.Text == CreateMD5(_nhanVien.MatKhau) && _nhanVien.TinhTrang == 1 && _nhanVien.TrangThai == 0)
+            if (CreateMD5(Txt_MatKhau.Text) == (_nhanVien.MatKhau) && _nhanVien.TinhTrang == 1 && _nhanVien.TrangThai == 0)
             {
                 BangTam bangTam = new BangTam();
                 bangTam.Id = _nhanVien.Id;
@@ -82,14 +82,13 @@ namespace _3_GUI_PresetationLayer
                     frmMain.Show();
                 }
             }
-            if (_check.CheckNull(Cmb_Email.Text) == false || _check.CheckNull(Txt_MatKhau.Text) == false)
+            //if (_check(Txt_MatKhau)=false || )
+            //{
+
+            //}
+            if (CreateMD5(Txt_MatKhau.Text) != (_nhanVien.MatKhau))
             {
-                MessageBox.Show("Không được để trống", "Thông báo");
-                return;
-            }
-            if (_nhanVien.TrangThai == 1 || _nhanVien.TinhTrang == 0)
-            {                
-                MessageBox.Show("Không có tài khoản này", "Thông Báo");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu","Thông báo");
                 return;
             }
            

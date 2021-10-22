@@ -94,6 +94,7 @@ namespace _3_GUI_PresetationLayer
             this.Controls.Add(this.Txt_EmailQMK);
             this.Controls.Add(this.label1);
             this.Name = "FrmQuenMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuenMatKhau";
             this.ResumeLayout(false);
             this.PerformLayout();

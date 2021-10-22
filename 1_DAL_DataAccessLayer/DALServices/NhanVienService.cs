@@ -20,7 +20,7 @@ namespace _1_DAL_DataAccessLayer.DALService
         {
             _dbContext.NhanViens.Add(nhanVien);
             _dbContext.SaveChanges();
-            return "Thêm thành công";
+            return null;
         }
 
         public string ChagePassWord(NhanVien nhanVien)
@@ -46,7 +46,7 @@ namespace _1_DAL_DataAccessLayer.DALService
         {
             _dbContext.NhanViens.Update(nhanVien);
             _dbContext.SaveChanges();
-            return "Sửa thành công";
+            return null;
         }
     }
 }

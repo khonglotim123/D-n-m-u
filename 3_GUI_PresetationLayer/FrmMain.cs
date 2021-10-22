@@ -136,5 +136,19 @@ namespace _3_GUI_PresetationLayer
             this.Hide();
             frmKhachHang.Show();
         }
+
+        private void thốngKêSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmThongKeSanPhamNhapKho frmThongKeSanPhamNhapKho = new FrmThongKeSanPhamNhapKho();
+            this.Hide();
+            frmThongKeSanPhamNhapKho.Show();
+        }
+
+        private void thốngKêTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmThongKeTonKho frmThongKeTonKho = new FrmThongKeTonKho();
+            this.Hide();
+            frmThongKeTonKho.Show();
+        }
     }
 }

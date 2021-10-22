@@ -22,5 +22,11 @@
     <Compile Update="FrmQuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmThongKeSanPhamNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmThongKeTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
